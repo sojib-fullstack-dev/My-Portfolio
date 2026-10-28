@@ -123,59 +123,7 @@ export function Experience() {
           </div>
         </article>
 
-        <article className="relative mt-6 overflow-hidden rounded-3xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50/70 p-6 shadow-[0_20px_50px_-30px_rgba(16,185,129,0.35)] sm:p-8 lg:p-10 dark:border-emerald-900/60 dark:from-slate-900 dark:to-emerald-950/20">
-          <div className="absolute -right-20 -top-20 size-48 rounded-full bg-emerald-200/30 blur-3xl dark:bg-emerald-800/10" />
 
-          <div className="relative grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-            <div>
-              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 text-xl" aria-hidden="true">
-                💻
-              </div>
-              <p className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                Personal Projects
-              </p>
-              <h3 className="mt-2 text-2xl font-bold text-slate-950 sm:text-3xl dark:text-white">
-                10+ Projects Completed
-              </h3>
-              <p className="mt-3 font-medium text-slate-600 dark:text-slate-300">
-                Full Stack Web Development
-              </p>
-            </div>
-
-            <div>
-              <p className="max-w-2xl leading-7 text-slate-600 dark:text-slate-300">
-                Built 10+ real-world full-stack web applications using modern technologies including React, Next.js, Node.js, MongoDB, TypeScript, and Tailwind CSS. Focused on authentication, REST APIs, responsive design, and AI-assisted development.
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-2.5" aria-label="Full stack development skills">
-                {[
-                  "React.js",
-                  "Next.js",
-                  "Node.js",
-                  "TypeScript",
-                  "MongoDB",
-                  "Tailwind CSS",
-                  "REST APIs",
-                  "Better Auth",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-flex items-center rounded-full border border-emerald-100 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href="#projects"
-                className="mt-6 inline-flex h-10 items-center justify-center rounded-lg border border-emerald-600 px-4 text-sm font-bold text-emerald-700 transition-colors duration-200 hover:bg-emerald-600 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:text-emerald-400 dark:hover:text-white"
-              >
-                View Projects
-              </a>
-            </div>
-          </div>
-        </article>
 
         <div className="mt-14">
           <div className="mb-7 flex items-end justify-between gap-4">

@@ -85,7 +85,7 @@ export function Navbar() {
           className="text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-emerald-700 dark:text-white dark:hover:text-emerald-400"
           aria-label="Go to home section"
         >
-          Sojib<span className="text-emerald-600">.</span>dev
+          Sojib<span className=" text-emerald-600 dark:text-emerald-400">.dev</span> 
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">

@@ -139,9 +139,6 @@ export function Projects() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 text-center sm:mb-12">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
-            Portfolio
-          </p>
           <h2 id="projects-heading" className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
             Featured Projects
           </h2>
