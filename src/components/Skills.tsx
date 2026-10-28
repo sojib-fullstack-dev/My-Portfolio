@@ -98,7 +98,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="bg-slate-50 px-4 py-20 sm:px-6 sm:py-24 lg:px-8 dark:bg-slate-950"
+      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto max-w-6xl">

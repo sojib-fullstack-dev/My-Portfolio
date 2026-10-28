@@ -134,10 +134,13 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8 dark:bg-slate-950"
+      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-6xl">
+        <p className="mb-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
+          Web Development Projects
+        </p>
         <div className="mb-10 text-center sm:mb-12">
           <h2 id="projects-heading" className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
             Featured Projects

@@ -65,7 +65,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8 dark:bg-slate-950"
+      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
       aria-labelledby="experience-heading"
     >
       <div className="mx-auto max-w-6xl">

@@ -75,7 +75,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-br from-white via-white to-emerald-50/70 px-4 py-10 text-slate-600 sm:px-6 sm:py-12 lg:px-8 dark:from-slate-950 dark:via-slate-950 dark:to-emerald-950/20 dark:text-slate-300">
+    <footer className="bg-transparent px-4 py-10 text-slate-600 sm:px-6 sm:py-12 lg:px-8 dark:text-slate-300">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
           <div className="max-w-md">

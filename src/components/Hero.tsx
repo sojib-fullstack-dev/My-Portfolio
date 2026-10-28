@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Download } from "lucide-react"
+import { CalendarDays, Clock3, Download } from "lucide-react"
 import * as React from "react"
 
 const titles = [
@@ -87,6 +87,17 @@ export function Hero() {
   const [titleIndex, setTitleIndex] = React.useState(0)
   const [displayedTitle, setDisplayedTitle] = React.useState("")
   const [isDeleting, setIsDeleting] = React.useState(false)
+  const [currentTime, setCurrentTime] = React.useState<Date | null>(null)
+
+  React.useEffect(() => {
+    const frame = window.requestAnimationFrame(() => setCurrentTime(new Date()))
+    const timer = window.setInterval(() => setCurrentTime(new Date()), 1000)
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.clearInterval(timer)
+    }
+  }, [])
 
   React.useEffect(() => {
     const currentTitle = titles[titleIndex]
@@ -127,10 +138,20 @@ export function Hero() {
     return () => window.clearTimeout(timeout)
   }, [displayedTitle, isDeleting, titleIndex])
 
+  const dateLabel = currentTime
+    ? new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(currentTime)
+    : "Loading date"
+  const dayLabel = currentTime
+    ? new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(currentTime)
+    : "Loading day"
+  const timeLabel = currentTime
+    ? new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", second: "2-digit" }).format(currentTime)
+    : "--:--:--"
+
   return (
     <section
       id="home"
-      className="relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-gradient-to-br from-white via-white to-emerald-50/70 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:from-slate-950 dark:via-slate-950 dark:to-emerald-950/20"
+      className="relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-transparent px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
       aria-labelledby="hero-name"
     >
       <div className="absolute top-20 right-[8%] -z-10 size-72 rounded-full bg-emerald-200/40 blur-3xl dark:bg-emerald-900/20" />
@@ -164,6 +185,23 @@ export function Hero() {
             user-friendly web applications with modern technologies. I also
             have 2+ years of experience in lead generation and data management.
           </p>
+
+          <div
+            className="mt-7 flex w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-2 rounded-full border border-emerald-100/80 bg-white/80 px-3.5 py-2 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm sm:text-sm dark:border-emerald-900/60 dark:bg-slate-900/70 dark:text-slate-300"
+            aria-label={`Current date and time: ${dayLabel}, ${dateLabel}, ${timeLabel}`}
+            role="timer"
+          >
+            <span className="flex items-center gap-1.5">
+              <CalendarDays className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <span>{dayLabel}</span>
+              <span className="text-slate-300 dark:text-slate-600" aria-hidden="true">•</span>
+              <span>{dateLabel}</span>
+            </span>
+            <span className="flex items-center gap-1.5 tabular-nums">
+              <Clock3 className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <span suppressHydrationWarning>{timeLabel}</span>
+            </span>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <div className="flex items-center gap-2" aria-label="Social profiles">

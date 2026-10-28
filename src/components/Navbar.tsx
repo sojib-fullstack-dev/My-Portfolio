@@ -1,10 +1,12 @@
 "use client"
 
+import Image from "next/image"
 import { Menu, Moon, Sun, X } from "lucide-react"
 import * as React from "react"
 
 const navItems = [
   { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
@@ -74,7 +76,7 @@ export function Navbar() {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/95">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-gradient-to-br from-white/95 via-white/95 to-emerald-50/80 backdrop-blur-md dark:border-slate-800 dark:from-slate-950/95 dark:via-slate-950/95 dark:to-emerald-950/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#home"
@@ -82,10 +84,20 @@ export function Navbar() {
             closeMenu()
             setActiveSection("#home")
           }}
-          className="text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-emerald-700 dark:text-white dark:hover:text-emerald-400"
+          className="group inline-flex items-center text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-emerald-700 dark:text-white dark:hover:text-emerald-400"
           aria-label="Go to home section"
         >
-          Sojib<span className=" text-emerald-600 dark:text-emerald-400">.dev</span> 
+          <span className="mr-2 inline-flex size-9 shrink-0 overflow-hidden rounded-full border-2 border-white bg-emerald-50 shadow-md ring-1 ring-emerald-200/70 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:ring-emerald-300 motion-reduce:transform-none dark:border-slate-900 dark:bg-slate-800 dark:ring-slate-700">
+            <Image
+              src="/assets/profile.png"
+              alt="Samiul Hasan Sojib"
+              width={36}
+              height={36}
+              priority
+              className="size-full object-cover"
+            />
+          </span>
+          <span>Sojib<span className="text-emerald-600 dark:text-emerald-400">.dev</span></span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
@@ -151,7 +163,7 @@ export function Navbar() {
       {isOpen && (
         <nav
           id="mobile-navigation"
-          className="border-t border-slate-100 bg-white px-4 py-3 shadow-lg dark:border-slate-800 dark:bg-slate-950 md:hidden"
+          className="border-t border-slate-100 bg-gradient-to-br from-white via-white to-emerald-50/70 px-4 py-3 shadow-lg dark:border-slate-800 dark:from-slate-950 dark:via-slate-950 dark:to-emerald-950/20 md:hidden"
           aria-label="Mobile navigation"
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-1">
