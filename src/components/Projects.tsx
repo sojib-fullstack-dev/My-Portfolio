@@ -14,6 +14,14 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {    name: "Wanderlast",
+    description: "Wanderlast is a full-stack travel booking platform where users can explore destinations, discover travel packages, add new destinations, and manage their bookings. It provides a seamless travel planning experience with an intuitive and user-friendly interface.",
+    tech: [
+  "Next.js","React","TypeScript", "Tailwind CSS", "Node.js",  "Express.js",  "MongoDB","Mongoose","Better Auth","REST API",],
+    github: "https://github.com/sojib-fullstack-dev/Wonderlust-client",
+    live: "https://wanderlust-go.vercel.app/",
+    imageName: "wanderlust.jpeg",
+  },
   {
     name: "Bazar Dor",
     description: "A Next.js web application built with TypeScript, authentication, MongoDB, and Tailwind CSS.",
