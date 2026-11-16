@@ -14,6 +14,27 @@ interface Project {
 }
 
 const projects: Project[] = [
+
+{
+  name: "Community Serve",
+  description:
+    "Community Serve is a full-stack community service platform where users can create, explore, join, and manage social welfare events. It connects volunteers and communities to make a positive impact through charity, fundraising, and social initiatives, providing a seamless and user-friendly experience.",
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Better Auth",
+    "REST API",
+  ],
+  github: "https://github.com/sojib-fullstack-dev/CommunityServe-client",
+  live: "https://communityserve.vercel.app/",
+  imageName: "cumminityserve.jpeg",
+},
+
   {    name: "Wanderlast",
     description: "Wanderlast is a full-stack travel booking platform where users can explore destinations, discover travel packages, add new destinations, and manage their bookings. It provides a seamless travel planning experience with an intuitive and user-friendly interface.",
     tech: [
@@ -162,11 +183,11 @@ export function Projects() {
           {visibleProjects.map((project) => (
             <article
               key={project.name}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-emerald-700/70"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-emerald-700/70"
             >
               <ProjectPreview project={project} />
 
-              <div className="p-5 sm:p-6">
+              <div className="flex h-full flex-col p-5 sm:p-6">
                 <h3 className="text-xl font-bold text-slate-950 dark:text-white">{project.name}</h3>
                 <p className="mt-3 min-h-12 text-sm leading-6 text-slate-600 dark:text-slate-300">
                   {project.description}
@@ -180,7 +201,7 @@ export function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-6 grid grid-cols-2 gap-2">
+                <div className="mt-auto grid grid-cols-2 gap-2 pt-6">
                   <a
                     href={project.live}
                     target="_blank"

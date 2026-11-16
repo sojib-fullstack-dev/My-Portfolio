@@ -181,7 +181,7 @@ export function Hero() {
           </div>
 
           <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 dark:text-slate-300">
-            I&apos;m a Full-Stack Web Developer focused on building responsive,
+            I&apos;m a Full-Stack Web Developer (MERN) focused on building responsive,
             user-friendly web applications with modern technologies. I also
             have 2+ years of experience in lead generation and data management.
           </p>
