@@ -158,3 +158,34 @@
     transform: translateY(-8px);
   }
 }
+
+@keyframes showcase-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.showcase-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.showcase-track {
+  animation: showcase-scroll 42s linear infinite;
+}
+
+.showcase-marquee:hover .showcase-track,
+.showcase-marquee:focus-within .showcase-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+
+  .showcase-track {
+    animation: none;
+  }
+}
