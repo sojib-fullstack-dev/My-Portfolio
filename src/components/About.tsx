@@ -25,24 +25,27 @@ export function About() {
   return (
     <section
       id="about"
-      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+      className="bg-transparent px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center sm:mb-12">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
+        <div className="mb-10 max-w-3xl sm:mb-12">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
             About Me
           </p>
           <h2
             id="about-heading"
-            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white"
+            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-5xl dark:text-white"
           >
             Full-stack developer building for the web
           </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
+            A little about what I build, how I work, and the experience I bring to a team.
+          </p>
         </div>
 
         <div className="grid items-stretch gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-6">
-          <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-emerald-50/60 p-6 shadow-sm sm:p-8 lg:p-10 dark:border-slate-800 dark:from-slate-900 dark:to-emerald-950/20">
+          <article className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-[0_24px_70px_-45px_rgba(15,23,42,0.28)] backdrop-blur-sm sm:p-8 lg:p-10 dark:border-white/10 dark:bg-slate-900/75">
             <div className="absolute -right-16 -top-16 size-44 rounded-full bg-emerald-200/35 blur-3xl dark:bg-emerald-800/10" />
 
             <div className="relative">
@@ -97,7 +100,7 @@ export function About() {
             {highlights.map(({ value, label, detail, icon: Icon }) => (
               <article
                 key={label}
-                className="group flex min-h-44 items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-900/10 sm:flex-col lg:min-h-0 lg:flex-row lg:items-center dark:border-slate-800 dark:bg-slate-900 dark:hover:border-emerald-700/70"
+                className="group flex min-h-44 items-start gap-4 rounded-2xl border border-white bg-white/80 p-5 shadow-[0_16px_45px_-35px_rgba(15,23,42,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-900/10 sm:flex-col lg:min-h-0 lg:flex-row lg:items-center dark:border-white/10 dark:bg-slate-900/75 dark:hover:border-emerald-700/70"
               >
                 <div className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
                   <Icon className="size-5" aria-hidden="true" />

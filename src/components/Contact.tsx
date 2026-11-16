@@ -65,15 +65,17 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+      className="bg-transparent px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
+      <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-emerald-100/80 bg-white/70 px-6 py-12 text-slate-950 shadow-[0_30px_90px_-50px_rgba(6,78,59,0.35)] sm:px-12 sm:py-16 lg:px-16 dark:border-white/10 dark:bg-slate-900/75 dark:text-white">
+        <div className="pointer-events-none absolute -right-24 -top-32 z-0 size-96 rounded-full bg-emerald-200/40 blur-[100px] dark:bg-emerald-500/15" />
+        <div className="pointer-events-none absolute -bottom-48 left-1/4 z-0 size-96 rounded-full bg-teal-200/30 blur-[100px] dark:bg-teal-500/10" />
+        <div className="relative z-10 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
             Contact
           </p>
-          <h2 id="contact-heading" className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+          <h2 id="contact-heading" className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-5xl dark:text-white">
             Let&apos;s Build Something Together
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-600 dark:text-slate-300">
@@ -81,26 +83,26 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="relative z-10 mt-10 grid gap-4 md:grid-cols-3">
           {contactItems.map(({ label, value, href, icon: Icon }) => (
             <a
               key={label}
               href={href}
-              className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-900/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-emerald-700/70"
+              className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white/85 p-5 text-left shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-white hover:shadow-lg hover:shadow-emerald-900/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-white/10 dark:bg-white/[0.06] dark:hover:border-emerald-300/50 dark:hover:bg-white/10 dark:hover:shadow-black/10 dark:focus-visible:outline-emerald-300"
               aria-label={`${label}: ${value}`}
             >
-              <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 transition-colors group-hover:bg-emerald-600 group-hover:text-white dark:bg-emerald-950/50 dark:text-emerald-400 dark:group-hover:bg-emerald-600 dark:group-hover:text-white">
+              <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 transition-colors group-hover:bg-emerald-600 group-hover:text-white dark:bg-emerald-300/10 dark:text-emerald-300 dark:group-hover:bg-emerald-400 dark:group-hover:text-emerald-950">
                 <Icon className="size-5" aria-hidden="true" />
               </span>
               <span className="min-w-0">
                 <span className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">{label}</span>
-                <span className="mt-1 block break-all text-sm font-bold text-slate-800 sm:text-base dark:text-slate-100">{value}</span>
+                <span className="mt-1 block break-all text-sm font-bold text-slate-900 sm:text-base dark:text-white">{value}</span>
               </span>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 flex flex-col items-center">
+        <div className="relative z-10 mt-8 flex flex-col items-center">
           <p className="mb-4 text-sm font-semibold text-slate-500 dark:text-slate-400">Connect with me</p>
           <div className="flex flex-wrap justify-center gap-3" aria-label="Social media links">
             {socialLinks.map(({ label, href, icon: Icon }) => (
@@ -111,7 +113,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 aria-label={label}
                 title={label}
-                className="inline-flex size-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:bg-emerald-600"
+                className="inline-flex size-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-white/15 dark:bg-white/[0.06] dark:text-slate-200 dark:hover:border-emerald-300 dark:hover:bg-emerald-400 dark:hover:text-emerald-950 dark:focus-visible:outline-emerald-300"
               >
                 <Icon className="size-[19px]" />
               </a>

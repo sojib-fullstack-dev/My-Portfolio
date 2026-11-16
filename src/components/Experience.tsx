@@ -65,23 +65,23 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+      className="bg-emerald-950/[0.025] px-4 py-24 sm:px-6 sm:py-28 lg:px-8 dark:bg-white/[0.015]"
       aria-labelledby="experience-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12 text-center sm:mb-14">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
+        <div className="mb-10 max-w-3xl sm:mb-12">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
             Experience
           </p>
           <h2
             id="experience-heading"
-            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white"
+            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-5xl dark:text-white"
           >
             Lead Generation &amp; Data Management
           </h2>
         </div>
 
-        <article className="relative overflow-hidden rounded-3xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50/70 p-6 shadow-[0_20px_50px_-30px_rgba(16,185,129,0.35)] sm:p-8 lg:p-10 dark:border-emerald-900/60 dark:from-slate-900 dark:to-emerald-950/20">
+        <article className="relative overflow-hidden rounded-[2rem] border border-emerald-100/80 bg-white p-6 shadow-[0_24px_70px_-45px_rgba(16,185,129,0.42)] sm:p-8 lg:p-10 dark:border-emerald-900/60 dark:bg-slate-900">
           <div className="absolute -right-20 -top-20 size-48 rounded-full bg-emerald-200/30 blur-3xl dark:bg-emerald-800/10" />
 
           <div className="relative grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
@@ -92,7 +92,7 @@ export function Experience() {
               <p className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
                 Professional Experience
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-slate-950 sm:text-3xl dark:text-white">
+              <h3 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl dark:text-white">
                 2+ Years of Experience
               </h3>
               <p className="mt-3 font-medium text-slate-600 dark:text-slate-300">
@@ -139,7 +139,7 @@ export function Experience() {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="group flex min-h-72 flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 motion-reduce:transition-none hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-900/10 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-emerald-700/70 dark:hover:shadow-black/30"
+                className="group flex min-h-72 flex-col rounded-2xl border border-white bg-white/85 p-6 shadow-[0_18px_50px_-40px_rgba(15,23,42,0.45)] transition-all duration-300 motion-reduce:transition-none hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/10 dark:border-white/10 dark:bg-slate-900/80 dark:hover:border-emerald-700/70 dark:hover:shadow-black/30"
               >
                 <div className="mb-5 flex items-center justify-between">
                   <div className="inline-flex size-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">

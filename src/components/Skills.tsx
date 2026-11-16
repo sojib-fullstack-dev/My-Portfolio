@@ -98,21 +98,21 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="bg-transparent px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+      className="bg-transparent px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center sm:mb-12">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">
+        <div className="mb-10 max-w-3xl sm:mb-12">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
             Technical Skills
           </p>
           <h2
             id="skills-heading"
-            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white"
+            className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-5xl dark:text-white"
           >
             Technologies I Work With
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600 dark:text-slate-300">
+          <p className="mt-4 max-w-2xl leading-7 text-slate-600 dark:text-slate-300">
             A practical toolkit for building modern web applications and supporting reliable data workflows.
           </p>
         </div>
@@ -123,7 +123,7 @@ export function Skills() {
             return (
               <article
                 key={group.title}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 dark:border-slate-800 dark:bg-slate-900"
+                className="rounded-[1.75rem] border border-white bg-white/80 p-5 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.5)] backdrop-blur-sm sm:p-6 dark:border-white/10 dark:bg-slate-900/75"
               >
                 <div className="mb-5 flex items-start gap-3">
                   <div className={`inline-flex size-11 shrink-0 items-center justify-center rounded-xl ${group.accentBg} ${group.accent}`}>
@@ -153,7 +153,7 @@ export function Skills() {
           })}
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm dark:border-emerald-900/60 dark:bg-slate-900">
+        <div className="mt-10 overflow-hidden rounded-[1.75rem] border border-emerald-100/80 bg-white/85 shadow-[0_20px_60px_-45px_rgba(16,185,129,0.4)] dark:border-emerald-900/60 dark:bg-slate-900/80">
           <details className="group">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500 sm:px-6 [&::-webkit-details-marker]:hidden">
               <div className="flex items-center gap-3">

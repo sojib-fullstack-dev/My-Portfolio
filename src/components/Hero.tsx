@@ -7,7 +7,7 @@ import {
   Clock3,
   Code2,
   Database,
-  Download,
+  FileText,
   SearchCheck,
   Sparkles,
   Workflow,
@@ -52,13 +52,6 @@ function YouTubeIcon({ className }: { className?: string }) {
   )
 }
 
-function XIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.25-8.29L3 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.84h1.72L8.38 4.05H6.54L17.8 19.84Z" />
-    </svg>
-  )
-}
 
 const socialLinks = [
   {
@@ -84,12 +77,6 @@ const socialLinks = [
     href: "https://www.youtube.com/@Coding_With_Sojib",
     icon: YouTubeIcon,
     hoverClass: "hover:border-[#FF0000] hover:bg-[#FF0000] hover:text-white hover:shadow-[#FF0000]/25",
-  },
-  {
-    label: "X",
-    href: "https://x.com/sojib_fullstack",
-    icon: XIcon,
-    hoverClass: "hover:border-slate-950 hover:bg-slate-950 hover:text-white hover:shadow-slate-950/20 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-950",
   },
 ]
 
@@ -148,7 +135,7 @@ export function PortfolioShowcase() {
   return (
     <section
       id="showcase"
-      className="overflow-hidden py-8 sm:py-10"
+      className="overflow-hidden border-y border-slate-200/60 bg-white/45 py-14 dark:border-white/10 dark:bg-slate-950/20 sm:py-16"
       aria-labelledby="showcase-heading"
     >
       <div className="mx-auto mb-6 max-w-6xl px-4 text-center sm:px-6 lg:px-8">
@@ -275,15 +262,17 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-transparent px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      className="relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-transparent px-4 py-16 text-slate-950 sm:px-6 sm:py-20 lg:px-8 dark:text-white"
       aria-labelledby="hero-name"
     >
-      <div className="absolute top-20 right-[8%] -z-10 size-72 rounded-full bg-emerald-200/40 blur-3xl dark:bg-emerald-900/20" />
-      <div className="absolute bottom-0 left-[15%] -z-10 size-64 rounded-full bg-teal-100/40 blur-3xl dark:bg-teal-900/10" />
+      <div className="absolute -top-32 right-[4%] -z-10 size-[30rem] rounded-full bg-emerald-200/45 blur-[120px] dark:bg-emerald-500/15" />
+      <div className="absolute -bottom-48 left-[15%] -z-10 size-[32rem] rounded-full bg-teal-200/35 blur-[130px] dark:bg-teal-500/10" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)] dark:bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)]" />
 
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="max-w-2xl animate-[fade-in_700ms_ease-out] motion-reduce:animate-none">
-          <p className="mb-3 text-base font-semibold tracking-wide text-slate-500 sm:text-lg dark:text-slate-400">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/75 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800 dark:border-emerald-300/20 dark:bg-white/[0.06] dark:text-emerald-200 sm:text-sm">
+            <span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)]" />
             Hello, I&apos;m
           </p>
 
@@ -292,13 +281,13 @@ export function Hero() {
             className="text-5xl font-extrabold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl dark:text-white"
           >
             Samiul Hasan
-            <span className="block text-emerald-600 dark:text-emerald-400">Sojib</span>
+            <span className="block bg-gradient-to-r from-emerald-300 via-teal-200 to-white bg-clip-text text-transparent">Sojib</span>
           </h1>
 
           <div className="mt-5 flex min-h-8 items-center text-lg font-semibold text-slate-700 sm:min-h-10 sm:text-2xl dark:text-slate-200">
             <span>{displayedTitle}</span>
             <span
-              className="ml-1 inline-block h-[1em] w-0.5 animate-pulse bg-emerald-600 align-middle motion-reduce:animate-none dark:bg-emerald-400"
+              className="ml-1 inline-block h-[1em] w-0.5 animate-pulse bg-emerald-300 align-middle motion-reduce:animate-none"
               aria-hidden="true"
             />
             <span className="sr-only">Full-Stack Web Developer</span>
@@ -311,18 +300,18 @@ export function Hero() {
           </p>
 
           <div
-            className="mt-7 flex w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-2 rounded-full border border-emerald-100/80 bg-white/80 px-3.5 py-2 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm sm:text-sm dark:border-emerald-900/60 dark:bg-slate-900/70 dark:text-slate-300"
+            className="mt-7 flex w-fit max-w-full flex-wrap items-center gap-x-4 gap-y-2 rounded-full border border-slate-200 bg-white/75 px-3.5 py-2 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm sm:text-sm dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-300"
             aria-label={`Current date and time: ${dayLabel}, ${dateLabel}, ${timeLabel}`}
             role="timer"
           >
             <span className="flex items-center gap-1.5">
-              <CalendarDays className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <CalendarDays className="size-4 text-emerald-700 dark:text-emerald-300" aria-hidden="true" />
               <span>{dayLabel}</span>
               <span className="text-slate-300 dark:text-slate-600" aria-hidden="true">•</span>
               <span>{dateLabel}</span>
             </span>
             <span className="flex items-center gap-1.5 tabular-nums">
-              <Clock3 className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <Clock3 className="size-4 text-emerald-700 dark:text-emerald-300" aria-hidden="true" />
               <span suppressHydrationWarning>{timeLabel}</span>
             </span>
           </div>
@@ -337,7 +326,7 @@ export function Hero() {
                   rel="noopener noreferrer"
                   aria-label={`${label} profile`}
                   title={label}
-                  className={`inline-flex size-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 ${hoverClass}`}
+                  className={`inline-flex size-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md dark:border-white/15 dark:bg-white/[0.06] dark:text-slate-200 ${hoverClass}`}
                 >
                   <Icon className="size-[18px]" />
                 </a>
@@ -345,28 +334,40 @@ export function Hero() {
             </div>
 
             <a
-              href="/assect/Samiul_Hasan_Sojib_CV_Final_Linked.pdf"
+              href="#projects"
+              className="inline-flex h-11 items-center gap-2 rounded-full border border-slate-300 px-5 text-sm font-bold text-slate-800 transition-colors hover:border-emerald-500 hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-white/20 dark:text-white dark:hover:border-emerald-300 dark:hover:bg-white/10 dark:focus-visible:outline-emerald-300"
+            >
+              Explore projects
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+
+            <a
+              href="/assect/Samiul_Hasan_Sojib_Resume_v2.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-full bg-emerald-600 px-5 text-sm font-bold text-white shadow-lg shadow-emerald-600/20 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-600/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 sm:px-6"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-emerald-600 px-5 text-sm font-bold text-white shadow-lg shadow-emerald-900/15 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:bg-emerald-400 dark:text-emerald-950 dark:hover:bg-emerald-300 dark:focus-visible:outline-emerald-300 sm:px-6"
             >
-              <Download className="size-4" aria-hidden="true" />
-              RESUME
+              <FileText className="size-4" aria-hidden="true" />
+              Resume
             </a>
           </div>
         </div>
 
         <div className="relative mx-auto w-[82%] max-w-[420px] lg:max-w-[440px]">
-          <div className="absolute -inset-6 -z-10 rounded-full bg-gradient-to-br from-emerald-200/70 via-teal-100/40 to-white/20 blur-2xl dark:from-emerald-800/30 dark:via-teal-900/20 dark:to-transparent" />
-          <div className="group relative aspect-square w-full overflow-hidden rounded-full bg-gradient-to-br from-emerald-100 via-white to-teal-100 transition-all duration-300 motion-reduce:animate-none motion-reduce:transition-none dark:from-emerald-950/50 dark:via-slate-900 dark:to-teal-950/40 animate-[profile-float_5s_ease-in-out_infinite] will-change-transform">
+          <div className="absolute -inset-7 -z-10 rounded-full bg-gradient-to-br from-emerald-300/55 via-teal-200/25 to-transparent blur-2xl dark:from-emerald-400/30 dark:via-teal-300/10" />
+          <div className="group relative aspect-square w-full animate-[profile-float_5s_ease-in-out_infinite] overflow-hidden rounded-full bg-gradient-to-br from-emerald-100 to-teal-100 shadow-2xl shadow-emerald-950/15 ring-1 ring-emerald-200/70 motion-reduce:animate-none dark:from-emerald-950 dark:to-teal-950 dark:shadow-black/30 dark:ring-emerald-400/20">
             <Image
               src="/assect/profile.png"
               alt="Samiul Hasan Sojib"
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 520px"
-              className="object-cover object-center scale-[1.09] transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.11]"
+              className="scale-[1.08] object-cover object-center transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.12]"
             />
+          </div>
+          <div className="absolute -bottom-5 -left-7 rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-xl backdrop-blur dark:border-white/10 dark:bg-slate-900/90 sm:-left-12">
+            <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Building with</p>
+            <p className="mt-1 text-sm font-bold text-slate-900 dark:text-white">React · Next.js · Node.js</p>
           </div>
         </div>
       </div>
