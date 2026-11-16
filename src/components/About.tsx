@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Database, GraduationCap, Layers3 } from "lucide-react"
+import { ArrowUpRight, Code2, Database, Layers3 } from "lucide-react"
 
 const highlights = [
   {
@@ -8,16 +8,16 @@ const highlights = [
     icon: Code2,
   },
   {
+    value: "15+",
+    label: "Completed Projects",
+    detail: "Modern, responsive web applications",
+    icon: Layers3,
+  },
+  {
     value: "2+ Years",
     label: "Lead Generation Experience",
     detail: "RS ZONE IT · Shakil Lead Agency",
     icon: Database,
-  },
-  {
-    value: "10 +",
-    label: "Completed Projects",
-    detail: "Modern, responsive web applications",
-    icon: Layers3,
   },
 ]
 
@@ -37,7 +37,7 @@ export function About() {
             id="about-heading"
             className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white"
           >
-            Building useful digital experiences
+            Full-stack developer building for the web
           </h2>
         </div>
 
@@ -51,11 +51,11 @@ export function About() {
               </div>
 
               <p className="animate-[fade-in_700ms_ease-out] text-lg leading-8 text-slate-600 motion-reduce:animate-none sm:text-xl sm:leading-9 dark:text-slate-300">
-                I&apos;m a <strong className="font-bold text-slate-950 dark:text-white">Full-Stack Web Developer and Lead Generation Specialist</strong>. I enjoy combining technical development with accurate data research, outreach, and business-focused problem solving.
+                I&apos;m a <strong className="font-bold text-slate-950 dark:text-white">Full-Stack Web Developer</strong> focused on building modern, responsive applications. I enjoy taking an idea from a thoughtful interface to a working product with dependable backend features.
               </p>
 
               <ul className="mt-5 flex flex-wrap gap-2" aria-label="Professional specialties">
-                {["B2B Lead Generation", "LinkedIn Prospecting", "Email Finding", "Web Research", "Data Management"].map((skill) => (
+                {["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "REST APIs"].map((skill) => (
                   <li
                     key={skill}
                     className="rounded-full border border-emerald-100 bg-white px-3 py-1.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:border-emerald-300 hover:text-emerald-700 dark:border-emerald-900/60 dark:bg-slate-950 dark:text-slate-200"
@@ -68,24 +68,24 @@ export function About() {
               <div className="mt-7 space-y-5 border-t border-slate-200/80 pt-7 dark:border-slate-800">
                 <div className="flex gap-4">
                   <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-white text-emerald-700 shadow-sm ring-1 ring-slate-200 dark:bg-slate-950 dark:text-emerald-400 dark:ring-slate-700">
-                    <Database className="size-4" aria-hidden="true" />
+                    <Code2 className="size-4" aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="font-bold text-slate-950 dark:text-white">Professional Lead Generation Experience</h3>
+                    <h3 className="font-bold text-slate-950 dark:text-white">Modern Web Development</h3>
                     <p className="mt-1 leading-7 text-slate-600 dark:text-slate-300">
-                      I work as a Lead Generation Specialist at <strong className="font-semibold text-slate-800 dark:text-slate-200">RS ZONE IT</strong> and <strong className="font-semibold text-slate-800 dark:text-slate-200">Shakil Lead Agency</strong>, building reliable prospect lists and maintaining organized, accurate business data.
+                      I build full-stack applications with Next.js, React, TypeScript, Node.js, Express, and MongoDB, connecting clean interfaces to useful backend features and APIs.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
                   <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-white text-emerald-700 shadow-sm ring-1 ring-slate-200 dark:bg-slate-950 dark:text-emerald-400 dark:ring-slate-700">
-                    <GraduationCap className="size-4" aria-hidden="true" />
+                    <Database className="size-4" aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="font-bold text-slate-950 dark:text-white">Modern Web Development</h3>
+                    <h3 className="font-bold text-slate-950 dark:text-white">Lead Generation Experience</h3>
                     <p className="mt-1 leading-7 text-slate-600 dark:text-slate-300">
-                      I&apos;m interested in building modern, scalable web applications with Next.js, React, and TypeScript, while continuing to improve my full-stack development skills.
+                      Alongside development, I bring 2+ years of experience at <strong className="font-semibold text-slate-800 dark:text-slate-200">RS ZONE IT</strong> and <strong className="font-semibold text-slate-800 dark:text-slate-200">Shakil Lead Agency</strong>, with a focus on research, accurate data, and organized prospect lists.
                     </p>
                   </div>
                 </div>

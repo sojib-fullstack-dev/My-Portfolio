@@ -11,6 +11,8 @@ interface Project {
   github: string
   live: string
   imageName: string
+  features: string[]
+  improvements: string[]
 }
 
 const projects: Project[] = [
@@ -33,6 +35,14 @@ const projects: Project[] = [
   github: "https://github.com/sojib-fullstack-dev/CommunityServe-client",
   live: "https://communityserve.vercel.app/",
   imageName: "cumminityserve.jpeg",
+  features: [
+    "Create, explore, and join community events.",
+    "Support charity, fundraising, and social initiatives.",
+  ],
+  improvements: [
+    "Add event search, filters, and categories.",
+    "Add volunteer activity tracking and notifications.",
+  ],
 },
 
   {    name: "Wanderlast",
@@ -42,6 +52,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Wonderlust-client",
     live: "https://wanderlust-go.vercel.app/",
     imageName: "wanderlust.jpeg",
+    features: [
+      "Explore destinations and travel packages.",
+      "Add destinations and manage bookings.",
+    ],
+    improvements: [
+      "Add destination filters and sorting.",
+      "Add booking status updates and trip reviews.",
+    ],
   },
   {
     name: "Bazar Dor",
@@ -50,6 +68,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Bazar-Dor",
     live: "https://bazar-dor-web-bd.vercel.app/",
     imageName: "Bazar-Dor.jpeg",
+    features: [
+      "Track daily market prices in one place.",
+      "Built with Next.js, MongoDB, and authentication.",
+    ],
+    improvements: [
+      "Add price history and trend charts.",
+      "Add product categories and location filters.",
+    ],
   },
   {
     name: "Hero Apps",
@@ -58,6 +84,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Hero-Apps",
     live: "https://hero-apps-web.vercel.app/",
     imageName: "Hero-Apps.jpeg",
+    features: [
+      "React and Next.js application.",
+      "TypeScript UI styled with Tailwind CSS.",
+    ],
+    improvements: [
+      "Add a short summary of the app's main features.",
+      "Document the key user workflows.",
+    ],
   },
   {
     name: "Fit-Log",
@@ -66,6 +100,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Fit-Log",
     live: "https://fit-log-pro.vercel.app/",
     imageName: "Fit-Log.jpeg",
+    features: [
+      "React and Next.js application.",
+      "TypeScript UI styled with Tailwind CSS.",
+    ],
+    improvements: [
+      "Add a short summary of the app's main features.",
+      "Document the key user workflows.",
+    ],
   },
   {
     name: "Book Vibe",
@@ -74,6 +116,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Book-Vibe",
     live: "https://bookvibe-web.vercel.app/",
     imageName: "Book-Vibe.jpeg",
+    features: [
+      "React and Next.js application.",
+      "TypeScript UI styled with Tailwind CSS.",
+    ],
+    improvements: [
+      "Add a short summary of the app's main features.",
+      "Document the key user workflows.",
+    ],
   },
   {
     name: "Dev Stack",
@@ -82,6 +132,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/Dev-Stack",
     live: "https://webdev-stack.vercel.app/",
     imageName: "Dev-Stack.jpeg",
+    features: [
+      "React application built with TypeScript.",
+      "Tailwind CSS styling.",
+    ],
+    improvements: [
+      "Add a short summary of the app's main features.",
+      "Document the key user workflows.",
+    ],
   },
   {
     name: "DEVCONF2026",
@@ -90,6 +148,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/DEVCONF2026",
     live: "https://sojib-fullstack-dev.github.io/DEVCONF2026/",
     imageName: "DEVCONF2026.jpeg",
+    features: [
+      "Static conference website built with HTML and CSS.",
+      "Hosted on GitHub Pages.",
+    ],
+    improvements: [
+      "Add speaker profiles and an event schedule.",
+      "Add an event registration form.",
+    ],
   },
   {
     name: "Demo Portfolio",
@@ -98,6 +164,14 @@ const projects: Project[] = [
     github: "https://github.com/sojib-fullstack-dev/demo-portfolio",
     live: "https://sojib-fullstack-dev.github.io/demo-portfolio/",
     imageName: "Demo-Portfolio.jpeg",
+    features: [
+      "Static portfolio website built with HTML and CSS.",
+      "Hosted on GitHub Pages.",
+    ],
+    improvements: [
+      "Add detailed project case studies.",
+      "Add a contact form and more portfolio sections.",
+    ],
   },
 ]
 
@@ -297,12 +371,20 @@ export function Projects() {
 
               <section aria-labelledby="features-heading">
                 <h4 id="features-heading" className="text-sm font-bold text-slate-950 dark:text-white">Features</h4>
-                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">Feature details are not currently documented.</p>
+                <ul className="mt-2 list-inside list-disc space-y-1 text-sm leading-6 marker:text-emerald-600 dark:text-slate-300 dark:marker:text-emerald-400">
+                  {selectedProject.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
               </section>
 
               <section aria-labelledby="improvements-heading">
                 <h4 id="improvements-heading" className="text-sm font-bold text-slate-950 dark:text-white">Potential Improvements</h4>
-                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">Project-specific improvement details are not currently documented.</p>
+                <ul className="mt-2 list-inside list-disc space-y-1 text-sm leading-6 marker:text-emerald-600 dark:text-slate-300 dark:marker:text-emerald-400">
+                  {selectedProject.improvements.map((improvement) => (
+                    <li key={improvement}>{improvement}</li>
+                  ))}
+                </ul>
               </section>
 
               <section className="grid gap-3 border-t border-slate-100 pt-6 sm:grid-cols-2 dark:border-slate-800" aria-label="Project links">
