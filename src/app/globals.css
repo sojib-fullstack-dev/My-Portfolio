@@ -183,9 +183,14 @@
   animation: showcase-scroll 42s linear infinite;
 }
 
-.showcase-marquee:hover .showcase-track,
 .showcase-marquee:focus-within .showcase-track {
   animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .showcase-marquee:hover .showcase-track {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
