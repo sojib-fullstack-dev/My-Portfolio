@@ -16,7 +16,37 @@ interface Project {
 }
 
 const projects: Project[] = [
-
+{
+  name: "PizzaHut",
+  description:
+    "PizzaHut is a full-stack online pizza ordering and multi-vendor restaurant management platform where customers can browse menus and place orders, vendors can manage items, orders, and Stripe-powered Premium subscriptions, and admins can moderate users, menu items, and track all payment transactions.",
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Better Auth",
+    "JWT",
+    "Stripe",
+    "REST API",
+  ],
+  github: "https://github.com/sojib-fullstack-dev/PizzaHut-client",
+  live: "https://pizzahut-bd.vercel.app/",
+  imageName: "pizzahut.jpeg",
+  features: [
+    "Browse, search, and filter wood-fired pizzas and place orders with duplicate/self-order protection.",
+    "Role-based dashboards for Customers, Vendors, and Admins secured with JWT authentication.",
+    "Vendor subscription system with $20 Stripe Checkout integration and automated payment verification.",
+    "Admin panel to approve/reject menu items, block/unblock users, and audit Stripe transactions.",
+  ],
+  improvements: [
+    "Add real-time order status tracking and delivery notifications.",
+    "Integrate customer reviews, ratings, and promo coupon codes.",
+  ],
+},
 {
   name: "Community Serve",
   description:
@@ -237,7 +267,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="bg-emerald-950/[0.025] px-4 py-24 sm:px-6 sm:py-28 lg:px-8 dark:bg-white/[0.015]"
+      className="bg-gradient-to-r from-emerald-50/50 via-white/20 to-sky-50/50 px-4 py-24 sm:px-6 sm:py-28 lg:px-8 dark:from-emerald-950/20 dark:via-white/[0.01] dark:to-sky-950/20"
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-6xl">
@@ -257,7 +287,7 @@ export function Projects() {
           {visibleProjects.map((project) => (
             <article
               key={project.name}
-              className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white bg-white/90 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-slate-900/10 dark:border-white/10 dark:bg-slate-900/90 dark:hover:border-emerald-700/70"
+              className="glass group flex h-full flex-col overflow-hidden rounded-[1.75rem] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-slate-900/10 dark:hover:border-emerald-700/70"
             >
               <ProjectPreview project={project} />
 
@@ -280,7 +310,7 @@ export function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-3 text-sm font-bold text-white transition-colors hover:bg-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                    className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 px-3 text-sm font-bold text-white shadow-md shadow-emerald-600/25 transition-all hover:-translate-y-0.5 hover:from-emerald-600 hover:to-teal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                   >
                     <ExternalLink className="size-4" aria-hidden="true" />
                     Live Demo
@@ -312,7 +342,7 @@ export function Projects() {
             <button
               type="button"
               onClick={() => setShowMore(true)}
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 shadow-sm transition-all hover:border-emerald-600 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
+              className="glass inline-flex h-11 items-center gap-2 rounded-full px-5 text-sm font-bold text-slate-800 transition-all hover:-translate-y-0.5 hover:border-emerald-400 hover:text-emerald-700 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
               aria-expanded={showMore}
             >
               Show More
@@ -334,7 +364,7 @@ export function Projects() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-modal-title"
-            className="relative max-h-[calc(100vh-2rem)] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+            className="glass relative max-h-[calc(100vh-2rem)] w-full max-w-2xl overflow-y-auto rounded-3xl shadow-2xl"
           >
             <button
               type="button"

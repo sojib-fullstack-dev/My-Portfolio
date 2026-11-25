@@ -126,7 +126,10 @@
     @apply text-foreground transition-colors duration-200;
     background-color: #f8faf9;
     background-image:
-      radial-gradient(ellipse at 85% 4%, rgba(167, 243, 208, 0.2), transparent 28rem),
+      radial-gradient(ellipse 55rem 38rem at 88% -8%, rgba(110, 231, 183, 0.38), transparent 62%),
+      radial-gradient(ellipse 48rem 34rem at -12% 22%, rgba(165, 243, 252, 0.45), transparent 62%),
+      radial-gradient(ellipse 44rem 30rem at 55% 112%, rgba(221, 214, 254, 0.32), transparent 60%),
+      radial-gradient(ellipse 34rem 26rem at 18% 68%, rgba(254, 240, 138, 0.16), transparent 60%),
       linear-gradient(180deg, #fbfdfc 0%, #f4f8f6 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -134,7 +137,9 @@
   html.dark body {
     background-color: oklch(0.12 0.015 165);
     background-image:
-      radial-gradient(ellipse at 85% 4%, oklch(0.26 0.07 165 / 0.35), transparent 30rem),
+      radial-gradient(ellipse 55rem 38rem at 88% -8%, oklch(0.72 0.16 160 / 0.16), transparent 62%),
+      radial-gradient(ellipse 48rem 34rem at -12% 22%, oklch(0.75 0.13 225 / 0.14), transparent 62%),
+      radial-gradient(ellipse 44rem 30rem at 55% 112%, oklch(0.65 0.14 295 / 0.12), transparent 60%),
       linear-gradient(180deg, oklch(0.14 0.02 165) 0%, oklch(0.12 0.015 165) 100%);
   }
   html {
@@ -145,6 +150,25 @@
   ::selection {
     color: #052e25;
     background: rgba(110, 231, 183, 0.55);
+  }
+}
+
+@layer components {
+  .glass {
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.62));
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow:
+      0 12px 40px -18px rgba(15, 23, 42, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+  .dark .glass {
+    background-image: linear-gradient(135deg, rgba(30, 41, 59, 0.78), rgba(15, 23, 42, 0.58));
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 12px 40px -18px rgba(0, 0, 0, 0.65),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 }
 

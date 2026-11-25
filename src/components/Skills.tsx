@@ -123,7 +123,7 @@ export function Skills() {
             return (
               <article
                 key={group.title}
-                className="rounded-[1.75rem] border border-white bg-white/80 p-5 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.5)] backdrop-blur-sm sm:p-6 dark:border-white/10 dark:bg-slate-900/75"
+                className="glass rounded-[1.75rem] p-5 sm:p-6"
               >
                 <div className="mb-5 flex items-start gap-3">
                   <div className={`inline-flex size-11 shrink-0 items-center justify-center rounded-xl ${group.accentBg} ${group.accent}`}>
@@ -139,7 +139,7 @@ export function Skills() {
                   {group.skills.map(({ name, icon: SkillIcon }) => (
                     <li
                       key={name}
-                      className="flex min-h-12 items-center gap-3 rounded-xl border border-slate-100 bg-slate-50/70 px-3 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-200 hover:bg-white dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-200 dark:hover:border-slate-700 dark:hover:bg-slate-950"
+                      className="flex min-h-12 items-center gap-3 rounded-xl border border-white/70 bg-white/60 px-3 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-emerald-200 hover:bg-white dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-200 dark:hover:border-emerald-700/60 dark:hover:bg-white/[0.08]"
                     >
                       <span className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200/70 ${group.accent} dark:bg-slate-900 dark:ring-slate-700`}>
                         <SkillIcon className="size-4" aria-hidden="true" />
@@ -153,7 +153,7 @@ export function Skills() {
           })}
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-[1.75rem] border border-emerald-100/80 bg-white/85 shadow-[0_20px_60px_-45px_rgba(16,185,129,0.4)] dark:border-emerald-900/60 dark:bg-slate-900/80">
+        <div className="glass mt-10 overflow-hidden rounded-[1.75rem]">
           <details className="group">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500 sm:px-6 [&::-webkit-details-marker]:hidden">
               <div className="flex items-center gap-3">

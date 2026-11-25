@@ -122,16 +122,16 @@ export function Navbar() {
           <a
             href="#contact"
             onClick={() => setActiveSection("#contact")}
-            className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-emerald-900/15 transition-colors duration-200 hover:bg-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:bg-emerald-400 dark:text-emerald-950 dark:hover:bg-emerald-300"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-emerald-600/25 transition-all duration-200 hover:from-emerald-600 hover:to-teal-700 hover:shadow-lg hover:shadow-emerald-600/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:from-emerald-400 dark:to-teal-500 dark:text-emerald-950 dark:hover:from-emerald-300 dark:hover:to-teal-400"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             Let&apos;s Talk
           </a>
           <a
-            href="/assect/Samiul_Hasan_Sojib_Resume_v2.pdf"
+            href="/assect/Samiul_Hasan_Sojib_Resume_v6.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-semibold text-emerald-800 transition-colors hover:border-emerald-400 hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-emerald-800 dark:bg-slate-900/80 dark:text-emerald-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-950/40"
+            className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-semibold text-emerald-800 backdrop-blur-md transition-colors hover:border-emerald-400 hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-emerald-800/80 dark:bg-slate-900/70 dark:text-emerald-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-950/40"
           >
             <FileText className="size-4" aria-hidden="true" />
             Resume
@@ -208,11 +208,11 @@ export function Navbar() {
                 Let&apos;s Talk
               </a>
               <a
-                href="/assect/Samiul_Hasan_Sojib_Resume_v2.pdf"
+                href="/assect/Samiul_Hasan_Sojib_Resume_v6.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-600 px-3 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 dark:bg-emerald-400 dark:text-emerald-950 dark:hover:bg-emerald-300"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-br from-emerald-500 to-teal-600 px-3 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/25 transition-all hover:from-emerald-600 hover:to-teal-700 dark:from-emerald-400 dark:to-teal-500 dark:text-emerald-950 dark:hover:from-emerald-300 dark:hover:to-teal-400"
               >
                 <FileText className="size-4" aria-hidden="true" />
                 Resume

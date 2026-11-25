@@ -45,7 +45,7 @@ export function About() {
         </div>
 
         <div className="grid items-stretch gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-6">
-          <article className="relative overflow-hidden rounded-[2rem] border border-white bg-white/80 p-6 shadow-[0_24px_70px_-45px_rgba(15,23,42,0.28)] backdrop-blur-sm sm:p-8 lg:p-10 dark:border-white/10 dark:bg-slate-900/75">
+          <article className="glass relative overflow-hidden rounded-[2rem] p-6 sm:p-8 lg:p-10">
             <div className="absolute -right-16 -top-16 size-44 rounded-full bg-emerald-200/35 blur-3xl dark:bg-emerald-800/10" />
 
             <div className="relative">
@@ -100,7 +100,7 @@ export function About() {
             {highlights.map(({ value, label, detail, icon: Icon }) => (
               <article
                 key={label}
-                className="group flex min-h-44 items-start gap-4 rounded-2xl border border-white bg-white/80 p-5 shadow-[0_16px_45px_-35px_rgba(15,23,42,0.4)] transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-900/10 sm:flex-col lg:min-h-0 lg:flex-row lg:items-center dark:border-white/10 dark:bg-slate-900/75 dark:hover:border-emerald-700/70"
+                className="glass group flex min-h-44 items-start gap-4 rounded-3xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-900/10 sm:flex-col lg:min-h-0 lg:flex-row lg:items-center dark:hover:border-emerald-700/70"
               >
                 <div className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
                   <Icon className="size-5" aria-hidden="true" />

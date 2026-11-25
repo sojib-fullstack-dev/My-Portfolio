@@ -68,7 +68,7 @@ export function Contact() {
       className="bg-transparent px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
       aria-labelledby="contact-heading"
     >
-      <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-emerald-100/80 bg-white/70 px-6 py-12 text-slate-950 shadow-[0_30px_90px_-50px_rgba(6,78,59,0.35)] sm:px-12 sm:py-16 lg:px-16 dark:border-white/10 dark:bg-slate-900/75 dark:text-white">
+      <div className="glass relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] px-6 py-12 text-slate-950 sm:px-12 sm:py-16 lg:px-16 dark:text-white">
         <div className="pointer-events-none absolute -right-24 -top-32 z-0 size-96 rounded-full bg-emerald-200/40 blur-[100px] dark:bg-emerald-500/15" />
         <div className="pointer-events-none absolute -bottom-48 left-1/4 z-0 size-96 rounded-full bg-teal-200/30 blur-[100px] dark:bg-teal-500/10" />
         <div className="relative z-10 text-center">
@@ -88,7 +88,7 @@ export function Contact() {
             <a
               key={label}
               href={href}
-              className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white/85 p-5 text-left shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-white hover:shadow-lg hover:shadow-emerald-900/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-white/10 dark:bg-white/[0.06] dark:hover:border-emerald-300/50 dark:hover:bg-white/10 dark:hover:shadow-black/10 dark:focus-visible:outline-emerald-300"
+              className="group flex items-center gap-4 rounded-2xl border border-white/70 bg-white/65 p-5 text-left shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-white/85 hover:shadow-lg hover:shadow-emerald-900/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-white/10 dark:bg-white/[0.06] dark:hover:border-emerald-300/50 dark:hover:bg-white/10 dark:hover:shadow-black/10 dark:focus-visible:outline-emerald-300"
               aria-label={`${label}: ${value}`}
             >
               <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 transition-colors group-hover:bg-emerald-600 group-hover:text-white dark:bg-emerald-300/10 dark:text-emerald-300 dark:group-hover:bg-emerald-400 dark:group-hover:text-emerald-950">

@@ -65,7 +65,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="bg-emerald-950/[0.025] px-4 py-24 sm:px-6 sm:py-28 lg:px-8 dark:bg-white/[0.015]"
+      className="bg-gradient-to-r from-emerald-50/50 via-white/20 to-sky-50/50 px-4 py-24 sm:px-6 sm:py-28 lg:px-8 dark:from-emerald-950/20 dark:via-white/[0.01] dark:to-sky-950/20"
       aria-labelledby="experience-heading"
     >
       <div className="mx-auto max-w-6xl">
@@ -81,7 +81,7 @@ export function Experience() {
           </h2>
         </div>
 
-        <article className="relative overflow-hidden rounded-[2rem] border border-emerald-100/80 bg-white p-6 shadow-[0_24px_70px_-45px_rgba(16,185,129,0.42)] sm:p-8 lg:p-10 dark:border-emerald-900/60 dark:bg-slate-900">
+        <article className="glass relative overflow-hidden rounded-[2rem] p-6 sm:p-8 lg:p-10">
           <div className="absolute -right-20 -top-20 size-48 rounded-full bg-emerald-200/30 blur-3xl dark:bg-emerald-800/10" />
 
           <div className="relative grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
@@ -112,7 +112,7 @@ export function Experience() {
                 {expertise.map(({ label, icon: Icon }) => (
                   <span
                     key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/75 px-3.5 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200"
                   >
                     <Icon className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
                     {label}
@@ -139,7 +139,7 @@ export function Experience() {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="group flex min-h-72 flex-col rounded-2xl border border-white bg-white/85 p-6 shadow-[0_18px_50px_-40px_rgba(15,23,42,0.45)] transition-all duration-300 motion-reduce:transition-none hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/10 dark:border-white/10 dark:bg-slate-900/80 dark:hover:border-emerald-700/70 dark:hover:shadow-black/30"
+                className="glass group flex min-h-72 flex-col rounded-3xl p-6 transition-all duration-300 motion-reduce:transition-none hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-900/10 dark:hover:border-emerald-700/70 dark:hover:shadow-black/30"
               >
                 <div className="mb-5 flex items-center justify-between">
                   <div className="inline-flex size-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
@@ -173,7 +173,7 @@ export function Experience() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${project.title} in Google Sheets`}
-                  className="mt-6 inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-emerald-600 px-4 text-sm font-bold text-emerald-700 transition-colors duration-200 hover:bg-emerald-600 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:text-emerald-400 dark:hover:text-white"
+                  className="mt-6 inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 px-4 text-sm font-bold text-white shadow-md shadow-emerald-600/25 transition-all duration-200 hover:-translate-y-0.5 hover:from-emerald-600 hover:to-teal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:from-emerald-400 dark:to-teal-500 dark:text-emerald-950 dark:hover:from-emerald-300 dark:hover:to-teal-400"
                 >
                   View Project
                   <ExternalLink className="size-4" aria-hidden="true" />
