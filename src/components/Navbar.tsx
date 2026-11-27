@@ -87,7 +87,7 @@ export function Navbar() {
           className="group inline-flex items-center text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
           aria-label="Go to home section"
         >
-          <span className="mr-2 inline-flex size-9 shrink-0 overflow-hidden rounded-full border-2 border-white bg-emerald-50 shadow-md ring-1 ring-emerald-200/70 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:ring-emerald-300 motion-reduce:transform-none dark:border-slate-900 dark:bg-slate-800 dark:ring-slate-700">
+          <span className="mr-2 inline-flex size-9 shrink-0 overflow-hidden rounded-full border-2 border-emerald-400 bg-emerald-50 shadow-md ring-1 ring-emerald-200/70 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:ring-emerald-300 motion-reduce:transform-none dark:border-emerald-500 dark:bg-slate-800 dark:ring-slate-700">
             <Image
               src="/assets/profile.png"
               alt="Samiul Hasan Sojib"
@@ -128,7 +128,7 @@ export function Navbar() {
             Let&apos;s Talk
           </a>
           <a
-            href="/assect/Samiul_Hasan_Sojib_Resume_v6.pdf"
+            href="/assect/Samiul_Hasan_Sojib_Resume_v8.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-semibold text-emerald-800 backdrop-blur-md transition-colors hover:border-emerald-400 hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-emerald-800/80 dark:bg-slate-900/70 dark:text-emerald-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-950/40"
@@ -208,7 +208,7 @@ export function Navbar() {
                 Let&apos;s Talk
               </a>
               <a
-                href="/assect/Samiul_Hasan_Sojib_Resume_v6.pdf"
+                href="/assect/Samiul_Hasan_Sojib_Resume_v8.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}

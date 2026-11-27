@@ -225,7 +225,7 @@ export function Hero() {
             </a>
 
             <a
-              href="/assect/Samiul_Hasan_Sojib_Resume_v6.pdf"
+              href="/assect/Samiul_Hasan_Sojib_Resume_v8.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 px-5 text-sm font-bold text-white shadow-lg shadow-emerald-600/30 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none hover:-translate-y-0.5 hover:from-emerald-600 hover:to-teal-700 hover:shadow-xl hover:shadow-emerald-600/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:from-emerald-400 dark:to-teal-500 dark:text-emerald-950 dark:hover:from-emerald-300 dark:hover:to-teal-400 dark:focus-visible:outline-emerald-300 sm:px-6"
