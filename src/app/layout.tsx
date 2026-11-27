@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Portfolio of Samiul Hasan Sojib, a full-stack web developer building responsive MERN and Next.js applications and data-driven lead generation solutions.",
     images: [
       {
-        url: "/assets/Dev-Stack.jpeg",
+        url: "/assets/sharing.jpeg",
         width: 1600,
         height: 900,
         alt: "Samiul Hasan Sojib — Full-Stack Web Developer",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Samiul Hasan Sojib | Full-Stack Web Developer",
     description: "Portfolio of Samiul Hasan Sojib, a full-stack web developer building responsive MERN and Next.js applications.",
-    images: ["/assets/Dev-Stack.jpeg"],
+    images: ["/assets/sharing.jpeg"],
     creator: "@sojib_fullstack",
   },
   robots: {
