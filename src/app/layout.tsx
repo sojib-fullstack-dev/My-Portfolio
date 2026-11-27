@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/sharing.jpeg",
-        width: 1600,
-        height: 900,
+        width: 1424,
+        height: 752,
         alt: "Samiul Hasan Sojib — Full-Stack Web Developer",
       },
     ],
